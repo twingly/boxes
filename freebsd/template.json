@@ -58,7 +58,8 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "packer_freebsd-10.1-amd64_{{.Provider}}.box"
+      "output": "packer_freebsd-10.1-amd64_{{.Provider}}.box",
+      "vagrantfile_template": "Vagrantfile.template"
     }
   ]
 }
