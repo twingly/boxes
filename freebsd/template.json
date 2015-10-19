@@ -1,6 +1,6 @@
 {
   "variables": {
-    "mirror": "http://ftp.freebsd.org/pub/FreeBSD"
+    "mirror": "http://ftp4.se.freebsd.org/pub/FreeBSD"
   },
 
   "builders": [
