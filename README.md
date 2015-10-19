@@ -1,6 +1,6 @@
 # boxes
 
-Build [Vagrant] boxes with [Packer].
+Build [Vagrant] boxes with [Packer]. Hosted [on Atlas].
 
 ## Build a box
 
@@ -16,6 +16,8 @@ Build
 
     packer build template.json
 
+Upload the box [to Atlas].
+
 ## Getting started
 
 Install Packer using Homebrew:
@@ -29,3 +31,5 @@ Install Packer using Homebrew:
 [Vagrant]: https://www.vagrantup.com/
 [Packer]: https://www.packer.io/
 [nickchappell/packer-templates]: https://github.com/nickchappell/packer-templates
+[on Atlas]: https://atlas.hashicorp.com/twingly
+[to Atlas]: https://atlas.hashicorp.com/vagrant
