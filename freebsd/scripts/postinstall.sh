@@ -16,17 +16,11 @@ env PAGER=/bin/cat /tmp/freebsd-update fetch
 env PAGER=/bin/cat /tmp/freebsd-update install
 
 #Install sudo, curl and ca_root_nss
-if [ $freebsd_major -gt 9 ]; then
-  # Use pkgng
-  env ASSUME_ALWAYS_YES=1 pkg bootstrap
-  pkg update
-  pkg install -y sudo
-  pkg install -y curl
-  pkg install -y ca_root_nss
-else
-  # Use old pkg
-  pkg_add -r sudo curl ca_root_nss
-fi
+env ASSUME_ALWAYS_YES=1 pkg bootstrap
+pkg update
+pkg install -y sudo
+pkg install -y curl
+pkg install -y ca_root_nss
 
 # Emulate the ETCSYMLINK behavior of ca_root_nss; this is for FreeBSD 10, where fetch(1) was
 # massively refactored and doesn't come with SSL CAcerts anymore
