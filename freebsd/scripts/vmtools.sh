@@ -33,21 +33,3 @@ if [ $PACKER_BUILDER_TYPE == 'virtualbox-iso' ]; then
   echo 'ifconfig_vtnet2_name="em2"' >> /etc/rc.conf
   echo 'ifconfig_vtnet3_name="em3"' >> /etc/rc.conf
 fi
-
-if [ $PACKER_BUILDER_TYPE == 'vmware-iso' ]; then
-  mkdir /tmp/vmfusion
-  mkdir /tmp/vmfusion-archive
-  mdconfig -a -t vnode -f /home/vagrant/freebsd.iso -u 0
-  mount -t cd9660 /dev/md0 /tmp/vmfusion
-  tar xzf /tmp/vmfusion/vmware-freebsd-tools.tar.gz -C /tmp/vmfusion-archive
-  $pkg_command $perl_pkg
-  # Welcome to 2005. Have you heard of this "YouTube" thing?
-  $pkg_command compat6x-`uname -m`
-  /tmp/vmfusion-archive/vmware-tools-distrib/vmware-install.pl --default
-
-  echo 'ifconfig_vxn0="dhcp"' >> /etc/rc.conf
-  umount /tmp/vmfusion
-  rmdir /tmp/vmfusion
-  rm -rf /tmp/vmfusion-archive
-  rm /home/vagrant/freebsd.iso
-fi
