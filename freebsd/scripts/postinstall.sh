@@ -51,13 +51,3 @@ EOT
 
 pw groupadd vboxusers
 pw groupmod vboxusers -m vagrant
-
-echo "=============================================================================="
-echo "NOTE: FreeBSD - Vagrant"
-echo "When using this basebox you need to do some special stuff in your Vagrantfile"
-echo "1) Enable HostOnly network"
-echo '	 config.vm.network "private_network", ip: "192.168.33.10"'
-echo "2) Use nfs instead of shared folders"
-echo '		config.vm.synced_folder "v-root", "/vagrant", :nfs => true'
-echo "============================================================================="
-exit
