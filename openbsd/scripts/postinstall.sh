@@ -11,5 +11,8 @@ echo "export PKG_PATH=\"$PKG_PATH\"" >> /home/vagrant/.profile
 # install wget/curl
 pkg_add wget curl
 
+# ansible support
+pkg_add python-2.7.9
+
 # sudo
 echo "vagrant ALL=(ALL) NOPASSWD: SETENV: ALL" >> /etc/sudoers
