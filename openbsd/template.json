@@ -1,6 +1,5 @@
 {
   "variables": {
-    "chef_version": "provisionerless",
     "ftp_proxy": "{{env `ftp_proxy`}}",
     "http_proxy": "{{env `http_proxy`}}",
     "https_proxy": "{{env `https_proxy`}}",
@@ -11,7 +10,6 @@
   "provisioners": [
     {
       "environment_vars": [
-        "CHEF_VERSION={{user `chef_version`}}",
         "MIRROR={{user `mirror`}}",
         "ftp_proxy={{user `ftp_proxy`}}",
         "http_proxy={{user `http_proxy`}}",
@@ -21,7 +19,6 @@
       "scripts": [
         "scripts/postinstall.sh",
         "scripts/vagrant.sh",
-        "scripts/chef.sh",
         "scripts/minimize.sh"
       ],
       "execute_command": "export {{.Vars}} && cat {{.Path}} | su -m"
