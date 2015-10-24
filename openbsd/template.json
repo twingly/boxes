@@ -138,36 +138,6 @@
       "type": "vagrant",
       "output": "openbsd-5.7-amd64-{{.Provider}}.box",
       "vagrantfile_template": "vagrantfiles/openbsd"
-    },
-    {
-      "type": "atlas",
-      "only": ["virtualbox-iso"],
-      "artifact": "{{user `atlas_box_name`}}",
-      "artifact_type": "vagrant.box",
-      "metadata": {
-        "provider": "virtualbox",
-        "version": "{{user `atlas_box_version`}}"
-      }
-    },
-    {
-      "type": "atlas",
-      "only": ["vmware-iso"],
-      "artifact": "{{user `atlas_box_name`}}",
-      "artifact_type": "vagrant.box",
-      "metadata": {
-        "provider": "vmware_desktop",
-        "version": "{{user `atlas_box_version`}}"
-      }
-    },
-    {
-      "type": "atlas",
-      "only": ["qemu"],
-      "artifact": "{{user `atlas_box_name`}}",
-      "artifact_type": "vagrant.box",
-      "metadata": {
-        "provider": "libvirt",
-        "version": "{{user `atlas_box_version`}}"
-      }
     }]
   ],
   "push": {
