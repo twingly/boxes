@@ -12,7 +12,7 @@ echo "export PKG_PATH=\"$PKG_PATH\"" >> /home/vagrant/.profile
 pkg_add wget curl
 
 # ansible support
-pkg_add python-2.7.9
+pkg_add -z python-2
 
 # sudo
 echo "vagrant ALL=(ALL) NOPASSWD: SETENV: ALL" >> /etc/sudoers
