@@ -3,7 +3,7 @@
     "ftp_proxy": "{{env `ftp_proxy`}}",
     "http_proxy": "{{env `http_proxy`}}",
     "https_proxy": "{{env `https_proxy`}}",
-    "mirror": "http://ftp.openbsd.org",
+    "mirror": "http://ftp.su.se",
     "atlas_box_name": "tmatilai/openbsd-5.7",
     "atlas_box_version": "1.0.2"
   },
