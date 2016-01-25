@@ -25,9 +25,9 @@
       "disk_size": 10140,
       "guest_os_type": "FreeBSD_64",
       "http_directory": "http",
-      "iso_checksum": "0c3d64ce48c3ef761761d0fea07e1935e296f8c045c249118bc91a7faf053a6b",
+      "iso_checksum": "97908f5cd00d86cafeb2c265bfabbd0aa79f87e9b6b31ecdb756bc96a4a62e93",
       "iso_checksum_type": "sha256",
-      "iso_url": "{{user `mirror`}}/releases/amd64/amd64/ISO-IMAGES/10.1/FreeBSD-10.1-RELEASE-amd64-disc1.iso",
+      "iso_url": "{{user `mirror`}}/releases/amd64/amd64/ISO-IMAGES/10.2/FreeBSD-10.2-RELEASE-amd64-disc1.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -35,8 +35,8 @@
       "shutdown_command": "echo 'shutdown -p now' > shutdown.sh; cat 'shutdown.sh' | su -",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "packer-freebsd-10.1-amd64",
-      "output_directory": "packer-freebsd-10.1-amd64-virtualbox",
+      "vm_name": "packer-freebsd-10.2-amd64",
+      "output_directory": "packer-freebsd-10.2-amd64-virtualbox",
       "vboxmanage": [
         [ "modifyvm", "{{.Name}}", "--memory", "512" ],
         [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
@@ -58,7 +58,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "packer_freebsd-10.1-amd64_{{.Provider}}.box",
+      "output": "packer_freebsd-10.2-amd64_{{.Provider}}.box",
       "vagrantfile_template": "Vagrantfile.template"
     }
   ]
