@@ -16,6 +16,10 @@ Build
 
     packer build template.json
 
+Import the box so you can test it with some existing Vagrantfile
+
+    vagrant box add --name "test/freebsd-10.2-amd64" packer_freebsd-10.1-amd64_virtualbox.box
+
 Upload the box [to Atlas].
 
 ## Getting started
