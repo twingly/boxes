@@ -28,7 +28,7 @@
       "boot_command": [
         "S<enter>",
         "cat <<EOF >>install.conf<enter>",
-        "System hostname = openbsd58<enter>",
+        "System hostname = openbsd59<enter>",
         "Password for root = vagrant<enter>",
         "Setup a user = vagrant<enter>",
         "Password for user = vagrant<enter>",
@@ -44,10 +44,10 @@
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
-      "iso_checksum": "2edd369c4b5f1960f9c974ee7f7bbe4105137968c1542d37411e83cb79f7f6f2",
+      "iso_checksum": "685262fc665425c61a2952b2820389a2d331ac5558217080e6d564d2ce88eecb",
       "iso_checksum_type": "sha256",
-      "iso_url": "{{user `mirror`}}/pub/OpenBSD/5.8/amd64/install58.iso",
-      "output_directory": "packer-openbsd-5.8-amd64-virtualbox",
+      "iso_url": "{{user `mirror`}}/pub/OpenBSD/5.9/amd64/install59.iso",
+      "output_directory": "packer-openbsd-5.9-amd64-virtualbox",
       "shutdown_command": "/sbin/halt -p",
       "ssh_username": "root",
       "ssh_password": "vagrant",
@@ -58,13 +58,13 @@
         [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
       ],
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "openbsd-5.8-amd64"
+      "vm_name": "openbsd-5.9-amd64"
     }
   ],
   "post-processors": [
     [{
       "type": "vagrant",
-      "output": "openbsd-5.8-amd64-{{.Provider}}.box",
+      "output": "openbsd-5.9-amd64-{{.Provider}}.box",
       "vagrantfile_template": "Vagrantfile.template"
     }]
   ],
