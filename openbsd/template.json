@@ -28,7 +28,7 @@
       "boot_command": [
         "S<enter>",
         "cat <<EOF >>install.conf<enter>",
-        "System hostname = openbsd58<enter>",
+        "System hostname = openbsd59<enter>",
         "Password for root = vagrant<enter>",
         "Setup a user = vagrant<enter>",
         "Password for user = vagrant<enter>",
