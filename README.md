@@ -20,7 +20,26 @@ Import the box so you can test it with some existing Vagrantfile
 
     vagrant box add --name "test/freebsd-10.1-amd64" packer_freebsd-10.1-amd64_virtualbox.box
 
+## Release a box
+
 Upload the box [to Atlas].
+
+Tag the commit that was used to build the box that was uploaded:
+
+    git tag freebsd-10.1-v1.0.0 007ecdb -a
+
+This will open your `$EDITOR`, follow this example in the message:
+
+```
+FreeBSD 10.1 v1.0.0
+
+Used to build:
+  https://atlas.hashicorp.com/twingly/boxes/freebsd-10.1-amd64/versions/1.0.0
+```
+
+Push the tag:
+
+    git push --tags
 
 ## Getting started
 
