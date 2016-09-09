@@ -47,6 +47,13 @@ Install Packer using Homebrew:
 
     brew install packer
 
+## License
+
+Different parts of this repository uses different licenses, see the individual licenses in each subdirectory:
+
+* [`freebsd/LICENSE`](freebsd/LICENSE)
+* [`openbsd/LICENSE`](openbsd/LICENSE)
+
 ## Credits
 
 * The FreeBSD box is based on [nickchappell/packer-templates].
