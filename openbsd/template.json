@@ -3,7 +3,7 @@
     "ftp_proxy": "{{env `ftp_proxy`}}",
     "http_proxy": "{{env `http_proxy`}}",
     "https_proxy": "{{env `https_proxy`}}",
-    "mirror": "http://ftp.su.se"
+    "mirror": "https://ftp.su.se"
   },
   "provisioners": [
     {
