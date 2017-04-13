@@ -28,7 +28,7 @@
       "boot_command": [
         "S<enter>",
         "cat <<EOF >>install.conf<enter>",
-        "System hostname = openbsd60<enter>",
+        "System hostname = openbsd61<enter>",
         "Password for root = vagrant<enter>",
         "Setup a user = vagrant<enter>",
         "Password for user = vagrant<enter>",
@@ -44,10 +44,10 @@
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
-      "iso_checksum": "a9b6b812cb456f11ba4362e232efdd5f0c47868f4281e383ecee77541b54498c",
+      "iso_checksum": "dfb4bf2408d993645ef9560e6913be48ca6e854322c42156954d4da93d450fd9",
       "iso_checksum_type": "sha256",
-      "iso_url": "{{user `mirror`}}/pub/OpenBSD/6.0/amd64/install60.iso",
-      "output_directory": "packer-openbsd-6.0-amd64-virtualbox",
+      "iso_url": "{{user `mirror`}}/pub/OpenBSD/6.1/amd64/install61.iso",
+      "output_directory": "packer-openbsd-6.1-amd64-virtualbox",
       "shutdown_command": "/sbin/halt -p",
       "ssh_username": "root",
       "ssh_password": "vagrant",
@@ -58,13 +58,13 @@
         [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
       ],
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "openbsd-6.0-amd64"
+      "vm_name": "openbsd-6.1-amd64"
     }
   ],
   "post-processors": [
     [{
       "type": "vagrant",
-      "output": "openbsd-6.0-amd64-{{.Provider}}.box",
+      "output": "openbsd-6.1-amd64-{{.Provider}}.box",
       "vagrantfile_template": "Vagrantfile.template"
     }]
   ],
