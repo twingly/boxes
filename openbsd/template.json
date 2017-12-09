@@ -3,7 +3,7 @@
     "ftp_proxy": "{{env `ftp_proxy`}}",
     "http_proxy": "{{env `http_proxy`}}",
     "https_proxy": "{{env `https_proxy`}}",
-    "mirror": "https://ftp.su.se"
+    "mirror": "https://fastly.cdn.openbsd.org"
   },
   "provisioners": [
     {
@@ -44,10 +44,10 @@
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
-      "iso_checksum": "dfb4bf2408d993645ef9560e6913be48ca6e854322c42156954d4da93d450fd9",
+      "iso_checksum": "b7994d29c7db3087db65158901d700fb7d10500b9b7496c1d86b285cabce0a2b",
       "iso_checksum_type": "sha256",
-      "iso_url": "{{user `mirror`}}/pub/OpenBSD/6.1/amd64/install61.iso",
-      "output_directory": "packer-openbsd-6.1-amd64-virtualbox",
+      "iso_url": "{{user `mirror`}}/pub/OpenBSD/6.2/amd64/install62.iso",
+      "output_directory": "packer-openbsd-6.2-amd64-virtualbox",
       "shutdown_command": "/sbin/halt -p",
       "ssh_username": "root",
       "ssh_password": "vagrant",
@@ -58,13 +58,13 @@
         [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
       ],
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "openbsd-6.1-amd64"
+      "vm_name": "openbsd-6.2-amd64"
     }
   ],
   "post-processors": [
     [{
       "type": "vagrant",
-      "output": "openbsd-6.1-amd64-{{.Provider}}.box",
+      "output": "openbsd-6.2-amd64-{{.Provider}}.box",
       "vagrantfile_template": "Vagrantfile.template"
     }]
   ],
