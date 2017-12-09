@@ -1,6 +1,6 @@
 # boxes
 
-Build [Vagrant] boxes with [Packer]. Hosted [on Atlas].
+Build [Vagrant] boxes with [Packer]. Hosted [on Vagrant Cloud].
 
 ## Build a box
 
@@ -22,7 +22,7 @@ Import the box so you can test it with some existing Vagrantfile
 
 ## Release a box
 
-Upload the box [to Atlas].
+Upload the box [to Vagrant Cloud].
 
 Tag the commit that was used to build the box that was uploaded:
 
@@ -63,5 +63,5 @@ Different parts of this repository uses different licenses, see the individual l
 [Packer]: https://www.packer.io/
 [nickchappell/packer-templates]: https://github.com/nickchappell/packer-templates
 [tmatilai/packer-openbsd]: https://github.com/tmatilai/packer-openbsd
-[on Atlas]: https://atlas.hashicorp.com/twingly
-[to Atlas]: https://atlas.hashicorp.com/vagrant
+[on Vagrant Cloud]: https://app.vagrantup.com/twingly
+[to Vagrant Cloud]: https://app.vagrantup.com
