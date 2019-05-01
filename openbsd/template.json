@@ -5,7 +5,7 @@
     "https_proxy": "{{env `https_proxy`}}",
     "mirror": "https://fastly.cdn.openbsd.org",
     "major_version": "6",
-    "minor_version": "4"
+    "minor_version": "5"
   },
   "provisioners": [
     {
@@ -46,7 +46,7 @@
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
-      "iso_checksum": "81833b79e23dc0f961ac5fb34484bca66386deb3181ddb8236870fa4f488cdd2",
+      "iso_checksum": "38d1f8cadd502f1c27bf05c5abde6cc505dd28f3f34f8a941048ff9a54f9f608",
       "iso_checksum_type": "sha256",
       "iso_url": "{{user `mirror`}}/pub/OpenBSD/{{user `major_version`}}.{{user `minor_version`}}/amd64/install{{user `major_version`}}{{user `minor_version`}}.iso",
       "output_directory": "packer-openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64-virtualbox",
