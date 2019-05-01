@@ -34,7 +34,7 @@ This will open your `$EDITOR`, follow this example in the message:
 FreeBSD 10.1 v1.0.0
 
 Used to build:
-  https://atlas.hashicorp.com/twingly/boxes/freebsd-10.1-amd64/versions/1.0.0
+  https://app.vagrantup.com/twingly/boxes/freebsd-10.1-amd64/versions/1.0.0
 ```
 
 Push the tag:
