@@ -4,6 +4,7 @@
     "http_proxy": "{{env `http_proxy`}}",
     "https_proxy": "{{env `https_proxy`}}",
     "mirror": "https://fastly.cdn.openbsd.org",
+    "boot_wait": "30s",
     "major_version": "7",
     "minor_version": "1"
   },
@@ -41,7 +42,7 @@
         "EOF<enter>",
         "install -af install.conf && reboot<enter>"
       ],
-      "boot_wait": "30s",
+      "boot_wait": "{{user `boot_wait`}}",
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
