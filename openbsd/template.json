@@ -6,7 +6,7 @@
     "mirror": "https://fastly.cdn.openbsd.org",
     "boot_wait": "30s",
     "major_version": "7",
-    "minor_version": "2"
+    "minor_version": "3"
   },
   "provisioners": [
     {
@@ -46,7 +46,7 @@
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
-      "iso_checksum": "sha256:0369ef40a3329efcb978c578c7fdc7bda71e502aecec930a74b44160928c91d3",
+      "iso_checksum": "sha256:fdf1210ffe87213eeca5f1d317e8b19364cbae83545cdfc7845098a53fc79a60",
       "iso_url": "{{user `mirror`}}/pub/OpenBSD/{{user `major_version`}}.{{user `minor_version`}}/amd64/install{{user `major_version`}}{{user `minor_version`}}.iso",
       "output_directory": "packer-openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64-virtualbox",
       "shutdown_command": "/sbin/halt -p",
@@ -56,7 +56,8 @@
       "ssh_wait_timeout": "10000s",
       "vboxmanage": [
         [ "modifyvm", "{{.Name}}", "--memory", "384" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
+        [ "modifyvm", "{{.Name}}", "--cpus", "1" ],
+        [ "modifyvm", "{{.Name}}", "--ioapic", "off" ]
       ],
       "virtualbox_version_file": ".vbox_version",
       "vm_name": "openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64"
