@@ -15,7 +15,7 @@ Used to build `amd64` boxes.
 
 # VMware Fusion
 
-Used to build `amd64` boxes.
+Used to build `arm64` boxes.
 
 1. Download miniroot image: `curl -O https://ftp.lysator.liu.se/pub/OpenBSD/7.1/arm64/miniroot71.img`
 1. Verify the checksum of the miniroot image [with signify]
