@@ -1,3 +1,8 @@
 packer-*
 packer_cache/
 *.box
+*.img
+*.vmdk
+*.vmsd
+*-vmware
+*.packer-vmware-vmx

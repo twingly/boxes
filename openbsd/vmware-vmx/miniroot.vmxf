@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Foundry>
+<VM>
+<VMId type="string">52 33 52 60 a5 20 8d c9-33 b6 6f d2 26 e4 7b f2</VMId>
+<ClientMetaData>
+<clientMetaDataAttributes/>
+<HistoryEventList/></ClientMetaData>
+<vmxPathName type="string">miniroot.vmx</vmxPathName></VM></Foundry>
