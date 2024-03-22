@@ -84,6 +84,7 @@ source "vmware-vmx" "openbsd" {
   vmx_remove_ethernet_interfaces = true
   # https://github.com/hashicorp/packer-plugin-vmware/blob/v1.0.10/example/pkrvars/debian/fusion-13.pkrvars.hcl
   vmx_data             = {
+    "numvcpus"                = "2"
     "cpuid.coresPerSocket"    = "2"
     "ethernet0.pciSlotNumber" = "32"
     "svga.autodetect"         = true
