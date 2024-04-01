@@ -3,10 +3,10 @@
     "ftp_proxy": "{{env `ftp_proxy`}}",
     "http_proxy": "{{env `http_proxy`}}",
     "https_proxy": "{{env `https_proxy`}}",
-    "mirror": "https://fastly.cdn.openbsd.org",
+    "mirror": "https://ftp.lysator.liu.se",
     "boot_wait": "30s",
     "major_version": "7",
-    "minor_version": "3"
+    "minor_version": "4"
   },
   "provisioners": [
     {
@@ -46,7 +46,7 @@
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
-      "iso_checksum": "sha256:fdf1210ffe87213eeca5f1d317e8b19364cbae83545cdfc7845098a53fc79a60",
+      "iso_checksum": "sha256:a1001736ed9fe2307965b5fcdb426ae11f9b80d26eb21e404a705144a0a224a0",
       "iso_url": "{{user `mirror`}}/pub/OpenBSD/{{user `major_version`}}.{{user `minor_version`}}/amd64/install{{user `major_version`}}{{user `minor_version`}}.iso",
       "output_directory": "packer-openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64-virtualbox",
       "shutdown_command": "/sbin/halt -p",
@@ -55,20 +55,22 @@
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "384" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "1" ],
-        [ "modifyvm", "{{.Name}}", "--ioapic", "off" ]
+        ["modifyvm", "{{.Name}}", "--memory", "384"],
+        ["modifyvm", "{{.Name}}", "--cpus", "1"],
+        ["modifyvm", "{{.Name}}", "--ioapic", "off"]
       ],
       "virtualbox_version_file": ".vbox_version",
       "vm_name": "openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64"
     }
   ],
   "post-processors": [
-    [{
-      "type": "vagrant",
-      "output": "openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64-{{.Provider}}.box",
-      "vagrantfile_template": "Vagrantfile.template"
-    }]
+    [
+      {
+        "type": "vagrant",
+        "output": "openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64-{{.Provider}}.box",
+        "vagrantfile_template": "Vagrantfile.template"
+      }
+    ]
   ],
   "push": {
     "name": "",
