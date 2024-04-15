@@ -20,6 +20,10 @@ printf "%s\n" "$hostname" > /etc/myname
 printf "127.0.0.1\tlocalhost %s\n" "$hostname" > /etc/hosts
 printf "::1\t\tlocalhost %s\n" "$hostname" >> /etc/hosts
 
+# wait until relink kernel is done, as it blocks syspatch
+echo "Waiting on kernel relink"
+while $(pgrep -qxf '/bin/ksh .*reorder_kernel'); do sleep 1; done
+
 # list and install available patches
 syspatch -c
 # handle: "syspatch: updated itself, run it again to install missing patches"
