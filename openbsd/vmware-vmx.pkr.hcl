@@ -38,7 +38,7 @@ variable "major_version" {
 
 variable "minor_version" {
   type    = string
-  default = "4"
+  default = "5"
 }
 
 variable "arch" {

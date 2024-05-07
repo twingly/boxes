@@ -1,5 +1,5 @@
 System hostname = openbsd${major_version}${minor_version}
-IPv4 address = dhcp
+IPv4 address = autoconf
 IPv6 address = none
 DNS domain = local
 IPv6 default router = none
