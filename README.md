@@ -1,6 +1,6 @@
 # boxes
 
-Build [Vagrant] boxes with [Packer]. Hosted [on Vagrant Cloud].
+Build [Vagrant] boxes with [Packer]. Hosted [on HashiCorp Cloud Platform].
 
 ## Build a box
 
@@ -22,7 +22,7 @@ Import the box so you can test it with some existing Vagrantfile
 
 ## Release a box
 
-Upload the box [to Vagrant Cloud].
+Upload the box [to HashiCorp Cloud Platform].
 
 Tag the commit that was used to build the box that was uploaded:
 
@@ -34,7 +34,7 @@ This will open your `$EDITOR`, follow this example in the message:
 FreeBSD 10.1 v1.0.0
 
 Used to build:
-  https://app.vagrantup.com/twingly/boxes/freebsd-10.1-amd64/versions/1.0.0
+  https://portal.cloud.hashicorp.com/vagrant/discover/twingly/freebsd-10.1-amd64/versions/1.0.0
 ```
 
 Push the tag:
@@ -63,5 +63,5 @@ Different parts of this repository uses different licenses, see the individual l
 [Packer]: https://www.packer.io/
 [nickchappell/packer-templates]: https://github.com/nickchappell/packer-templates
 [tmatilai/packer-openbsd]: https://github.com/tmatilai/packer-openbsd
-[on Vagrant Cloud]: https://app.vagrantup.com/twingly
-[to Vagrant Cloud]: https://app.vagrantup.com
+[on HashiCorp Cloud Platform]: https://portal.cloud.hashicorp.com/vagrant/discover/twingly
+[to HashiCorp Cloud Platform]: https://portal.cloud.hashicorp.com/vagrant/discover
