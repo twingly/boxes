@@ -6,7 +6,7 @@
     "mirror": "https://ftp.lysator.liu.se",
     "boot_wait": "30s",
     "major_version": "7",
-    "minor_version": "5"
+    "minor_version": "6"
   },
   "provisioners": [
     {
@@ -46,7 +46,7 @@
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
-      "iso_checksum": "sha256:034435c6e27405d5a7fafb058162943c194eb793dafdc412c08d49bb56b3892a",
+      "iso_checksum": "sha256:60cba8cb391b50bba8fa10fc768bd0529636f5345d82133c93e22c798d8e5269",
       "iso_url": "{{user `mirror`}}/pub/OpenBSD/{{user `major_version`}}.{{user `minor_version`}}/amd64/install{{user `major_version`}}{{user `minor_version`}}.iso",
       "output_directory": "packer-openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64-virtualbox",
       "shutdown_command": "/sbin/halt -p",
