@@ -12,7 +12,7 @@ pkg_add sudo--
 echo "vagrant ALL=(ALL) NOPASSWD: SETENV: ALL" >> /etc/sudoers
 
 # ansible support
-pkg_add "python3"
+pkg_add "python%3"
 
 # ensure consistent resolvable hostname
 hostname=$(hostname -s)
