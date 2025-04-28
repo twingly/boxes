@@ -3,10 +3,10 @@
     "ftp_proxy": "{{env `ftp_proxy`}}",
     "http_proxy": "{{env `http_proxy`}}",
     "https_proxy": "{{env `https_proxy`}}",
-    "mirror": "https://ftp.lysator.liu.se",
+    "mirror": "https://cdn.openbsd.org",
     "boot_wait": "30s",
     "major_version": "7",
-    "minor_version": "6"
+    "minor_version": "7"
   },
   "provisioners": [
     {
@@ -46,7 +46,7 @@
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
-      "iso_checksum": "sha256:60cba8cb391b50bba8fa10fc768bd0529636f5345d82133c93e22c798d8e5269",
+      "iso_checksum": "sha256:da0106e39463f015524dca806f407c37a9bdd17e6dfffe533b06a2dd2edd8a27",
       "iso_url": "{{user `mirror`}}/pub/OpenBSD/{{user `major_version`}}.{{user `minor_version`}}/amd64/install{{user `major_version`}}{{user `minor_version`}}.iso",
       "output_directory": "packer-openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64-virtualbox",
       "shutdown_command": "/sbin/halt -p",
