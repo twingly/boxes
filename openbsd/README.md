@@ -17,7 +17,7 @@ Used to build `amd64` boxes.
 
 Used to build `arm64` boxes.
 
-1. Download miniroot image: `curl -O https://ftp.lysator.liu.se/pub/OpenBSD/7.6/arm64/miniroot.img`
+1. Download miniroot image: `curl -O https://cdn.openbsd.org/pub/OpenBSD/7.7/arm64/miniroot.img`
 1. Verify the checksum of the miniroot image [with signify]
 1. Convert miniroot image to VMware disk: `qemu-img convert -f raw -O vmdk miniroot76.img vmware-vmx/miniroot.vmdk`
 1. Validate box config: `packer validate vmware-vmx.pkr.hcl`

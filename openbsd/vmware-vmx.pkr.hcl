@@ -38,7 +38,7 @@ variable "major_version" {
 
 variable "minor_version" {
   type    = string
-  default = "6"
+  default = "7"
 }
 
 variable "arch" {
@@ -48,7 +48,7 @@ variable "arch" {
 
 variable "mirror" {
   type    = string
-  default = "https://ftp.lysator.liu.se"
+  default = "https://cdn.openbsd.org"
 }
 
 variable "ssh_username" {
