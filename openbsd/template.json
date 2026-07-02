@@ -6,7 +6,7 @@
     "mirror": "https://cdn.openbsd.org",
     "boot_wait": "30s",
     "major_version": "7",
-    "minor_version": "8"
+    "minor_version": "9"
   },
   "provisioners": [
     {
@@ -38,7 +38,7 @@
         "What timezone are you in = UTC<enter>",
         "Location of sets = cd<enter>",
         "Set name(s) = -game*.tgz -x*.tgz<enter>",
-        "Directory does not contain SHA256.sig. Continue without verification = yes<enter>",
+        "Continue without verification = yes<enter>",
         "EOF<enter>",
         "install -af install.conf && reboot<enter>"
       ],
@@ -46,7 +46,7 @@
       "disk_size": 10140,
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
-      "iso_checksum": "sha256:29ce7eda86ee14a5a30776f18523b416a5572db03ee32d9a1109c446cb3949b3",
+      "iso_checksum": "sha256:7a4a92e953618035097c796a90b54424a0f3ae775552e1e7d102cf8a5130449f",
       "iso_url": "{{user `mirror`}}/pub/OpenBSD/{{user `major_version`}}.{{user `minor_version`}}/amd64/install{{user `major_version`}}{{user `minor_version`}}.iso",
       "output_directory": "packer-openbsd-{{user `major_version`}}.{{user `minor_version`}}-amd64-virtualbox",
       "shutdown_command": "/sbin/halt -p",
