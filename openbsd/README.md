@@ -23,6 +23,6 @@ Used to build `arm64` boxes.
 1. Verify the checksum of the miniroot image [with signify] `signify -Cp openbsd-79-base.pub -x SHA256.sig miniroot79.img`
 1. Convert miniroot image to VMware disk: `qemu-img convert -f raw -O vmdk miniroot79.img vmware-vmx/miniroot.vmdk`
 1. Adjust box config to match current version
-    - Change major and/or minor version in `template.json` and `vmware-vmx.pkr.hcl`
+    - Change major and/or minor version in `vmware-vmx.pkr.hcl`
 1. Validate box config: `packer validate vmware-vmx.pkr.hcl`
 1. Build the box: `packer build vmware-vmx.pkr.hcl`
