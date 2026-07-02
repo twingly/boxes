@@ -10,7 +10,7 @@ Used to build `amd64` boxes.
 1. Update the template file
     1. Update the version
     1. Update the checksum
-
+1. Build the box with `packer build template.json`
 [with signify]: https://www.openbsd.org/faq/faq4.html#Download
 
 # VMware Fusion
