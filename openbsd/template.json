@@ -38,7 +38,7 @@
         "What timezone are you in = UTC<enter>",
         "Location of sets = cd<enter>",
         "Set name(s) = -game*.tgz -x*.tgz<enter>",
-        "Directory does not contain SHA256.sig. Continue without verification = yes<enter>",
+        "Continue without verification = yes<enter>",
         "EOF<enter>",
         "install -af install.conf && reboot<enter>"
       ],
